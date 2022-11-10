@@ -1,0 +1,102 @@
+# Project information
+site_name: Examples to develop and configure Watson Assistant extensions APIs
+site_url: https://thomassuedbroecker.github.io/extension-apis
+site_author: Thomas Suedbroecker
+
+# Repository
+repo_name: Examples to develop and configure Watson Assistant extensions APIs
+repo_url: https://github.com/thomassuedbroecker/extension-apis
+edit_uri: edit/master/documentation
+docs_dir: documentation
+
+# Navigation
+nav:
+  - Objective: ./objectives.md
+  - Prerequisites: ./nodejs-application-prerequisites.md
+  - Examples:
+    - Nodes.js: 
+      - Example application: ./nodejs-application-nodejs.md
+      - Application development: ./nodejs-application-development.md
+      - Application deployment:
+          - IBM Cloud Code Engine: ./nodejs-application-deployment-codeengine.md
+      - Open API definition: ./nodejs-application-openapi-specification.md
+      - Configure assistant: ./nodejs-application-extension-assistant.md
+  - Additional and useful resources: ./additional-resources.md
+ 
+## DO NOT CHANGE BELOW THIS LINE
+
+# Theme
+theme:
+  name: material
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  icon:
+    # .svg automatically appended
+    #logo: ibm_8bar_reverse_2
+    logo: material/library
+  # enable if you want to use a custom icon
+  # custom_dir: overrides
+  features:
+    # - navigation.tabs
+    # - navigation.instant
+    - navigation.expand
+  palette:
+    scheme: default
+    primary: black
+    accent: blue
+  # palette:
+  #  scheme: default
+  #  primary: blue
+  #  accent: blue
+
+# Plugins
+plugins:
+  - search
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/thomassuedbroecker
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/tsuedbroecker
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UC-Z5jLA2-eamaS4-o1gzYEA
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
