@@ -19,7 +19,7 @@ The following diagram displays the simplified architecture dependencies inside a
 
  1. Add a custom extensions
     1. We have an `assistant instance` inside `Watson Assistant service`.
-    2. The `assistant instance` simplified contains `enviornments`, `integrations` and `actions`.
+    2. The `assistant instance` simplified contains `environments`, `integrations` and `actions`.
     3. The integrations do contain a catalog of extensions.
     4. The extension catalog contains `Out-Of-The-Box` and maybe `custom` extensions.
     5. A `custom extension` uses an Open API specification of an application to consunme the  REST API provided by this application.
