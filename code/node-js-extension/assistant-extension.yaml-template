@@ -1,0 +1,41 @@
+openapi: 3.0.0
+info:
+  version: v1
+  title: assistant-extension API for a Node.js application
+  description: Assistant-extension API for a Node.js application documentation to be integrated with Watson Assistant.
+
+servers:
+  - description: Code Engine application
+    url: CODE_ENGINE_APPLICATION_URL/v1
+
+security:
+  - basicAuth: []
+  
+paths:
+  /getmessage:
+    get:
+      description: Returns a simple message
+      responses:
+        '200':
+          description: 200 message returned
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '401':
+          description: 401 Access denied
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic

@@ -1,0 +1,19 @@
+{
+  "author": "Thomas Suedbroecker",
+  "license": "Apache License Version 2.0",
+  "name": "node-js-extension",
+  "version": "1.0.0",
+  "description": "node-js-extension",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "node_modules/.bin/goodparts ./server.js"
+  },
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  }
+}
