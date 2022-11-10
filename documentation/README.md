@@ -13,7 +13,7 @@ This repository contains the source code and the steps how to do the setup and u
 
 ### Simplified architecture dependencies 
 
-The following diagram displays the simplified architecture dependencies inside a `Watson Assistant Service`. We are using to integrate an `custom extension` to an `assistant instance`. 
+The following diagram displays the simplified architecture dependencies inside a `Watson Assistant Service`. In the examples we are going to integrate an `custom extension` to an `assistant instance`. 
 
 ![](images/nodejs-extension-10.png)
 
