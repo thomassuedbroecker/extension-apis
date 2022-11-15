@@ -14,7 +14,7 @@ nav:
   - Objective: ./objectives.md
   - Prerequisites: ./nodejs-application-prerequisites.md
   - Examples:
-    - Nodes.js: 
+    - Node.js: 
       - Example application: ./nodejs-application-nodejs.md
       - Application development: ./nodejs-application-development.md
       - Application deployment:
