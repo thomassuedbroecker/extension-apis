@@ -30,7 +30,7 @@ export EXTENSION_IMAGE="$REGISTRY/$REPOSITORY/nodejs-assistant-extension:$COMMON
 ```sh
 cd code/node-js-extension
 export ROOTFOLDER=$(pwd)
-export MYPROJECT=ce-assistant-extention
+export MYPROJECT=ce-assistant-extension
 export RESOURCE_GROUP=default
 export REGION=eu-de
 
