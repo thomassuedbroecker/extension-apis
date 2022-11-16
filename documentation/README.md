@@ -31,7 +31,7 @@ The following diagram displays the simplified architecture dependencies inside a
     2. The `assistant instance` simplified contains `environments`, `integrations` and `actions`.
     3. The integrations do contain a catalog of extensions.
     4. The extension catalog contains `Out-Of-The-Box` and maybe `custom` extensions.
-    5. A `custom extension` uses an Open API specification of an application to consunme the  REST API provided by this application.
+    5. A `custom extension` uses an Open API specification of an application to consume the  REST API provided by this application.
 
 2. Make a custom extension available for usage in an action.
 
