@@ -21,7 +21,7 @@ nav:
           - IBM Cloud Code Engine: ./nodejs-application-deployment-codeengine.md
       - Open API definition: ./nodejs-application-openapi-specification.md
       - Configure assistant: ./nodejs-application-extension-assistant.md
-  - Additional and useful resources: ./additional-resources.md
+  - Additional resources: ./additional-resources.md
  
 ## DO NOT CHANGE BELOW THIS LINE
 
