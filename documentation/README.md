@@ -15,6 +15,10 @@ Here is a `1-hour` YouTube `live stream` related to the repository.
 * [IBM Cloud Watson Assistant service](https://cloud.ibm.com/catalog/services/watson-assistant#about)
 * [IBM Cloud Code Engine](https://cloud.ibm.com/codeengine/overview) Serverless platform to run job or containers.
 
+* Simplified architecture dependencies
+
+![](images/nodejs-extension-13.png)
+
 ### Simplified architecture dependencies 
 
 The following diagram displays the simplified architecture dependencies inside a `Watson Assistant Service`. In the examples we are going to integrate an `custom extension` to an `assistant instance`. 
@@ -32,6 +36,7 @@ The following diagram displays the simplified architecture dependencies inside a
     1. Add the custom extension the `environments` of the `assistant instance`.
 
 3. Use the `custom extension` in a `step` of an `action`.
+
    
 ### Topics for each example
 
