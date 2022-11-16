@@ -21,11 +21,12 @@ The diagram shows the simplified architecture dependencies of the running exampl
 
 ### Simplified architecture dependencies 
 
-The following diagram displays the simplified architecture dependencies inside a `Watson Assistant Service`. In the examples we are going to integrate an `custom extension` to an `assistant instance`. 
+The following diagram displays the simplified architecture dependencies inside a `Watson Assistant Service`. In the examples we are going to integrate a `custom extension` to an `assistant instance`. 
 
 ![](images/nodejs-extension-10.png)
 
  1. Add a custom extensions
+
     1. We have an `assistant instance` inside `Watson Assistant service`.
     2. The `assistant instance` simplified contains `environments`, `integrations` and `actions`.
     3. The integrations do contain a catalog of extensions.
@@ -33,6 +34,7 @@ The following diagram displays the simplified architecture dependencies inside a
     5. A `custom extension` uses an Open API specification of an application to consunme the  REST API provided by this application.
 
 2. Make a custom extension available for usage in an action.
+
     1. Add the custom extension the `environments` of the `assistant instance`.
 
 3. Use the `custom extension` in a `step` of an `action`.
