@@ -6,16 +6,16 @@ Each application needs to have an [Open API specification](https://github.com/OA
 
 This repository contains the source code and the steps how to do the setup and use the extension in the [IBM Cloud Watson Assistant service](https://cloud.ibm.com/catalog/services/watson-assistant#about). You can also visit the [Assistant-Toolkit](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions#getting-started) to get started with the development and usage of custom extensions.
 
-Here is a `1-hour` YouTube `live stream` related to the repository.
+Here is a `1-hour` YouTube `live stream` related to this repository.
 
 [![Watson Assistant extension APIs - develop and configure a Node.js container](https://img.youtube.com/vi/hTWgs7lBE_k/0.jpg)](https://www.youtube.com/watch?v=hTWgs7lBE_k "Click play on youtube")
 
 ### Used IBM Cloud services
 
-* [IBM Cloud Watson Assistant service](https://cloud.ibm.com/catalog/services/watson-assistant#about)
-* [IBM Cloud Code Engine](https://cloud.ibm.com/codeengine/overview) Serverless platform to run job or containers.
+* [IBM Cloud Watson Assistant service](https://cloud.ibm.com/catalog/services/watson-assistant#about) The service will be used with a _"lite plan"_ which creates no costs and limited usage.
+* [IBM Cloud Code Engine](https://cloud.ibm.com/codeengine/overview) Serverless platform to run job or containers. Will be used with _"pay as you use"_ , but the service provides a free tier.
 
-* Simplified architecture dependencies
+The diagram shows the simplified architecture dependencies of the running example on IBM Cloud.
 
 ![](images/nodejs-extension-13.png)
 
