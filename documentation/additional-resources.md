@@ -1,5 +1,7 @@
 # Additional resources
-Here are some additional and useful resources
+
+Here are some additional and useful resources.
+
 ### Links
 
 * OpenAPI related
