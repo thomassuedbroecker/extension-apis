@@ -3,7 +3,7 @@
 # **************** Global variables
 export ROOT_PATH=$(pwd)
 export CONTAINER_NAME=extension-verification
-export IMAGE_NAME=extension-local-verification:v3
+export IMAGE_NAME=extension-local-verification:v4
 export CONTAINER_RUNTIME=podman
 
 # **************** Verify container
