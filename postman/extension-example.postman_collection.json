@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "5e09067d-8fc8-44e6-af08-f4746ad3db88",
+		"name": "Extension Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1490545"
+	},
+	"item": [
+		{
+			"name": "Local invocation \"health endpoint\"",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local invocation \"getmessage\"",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Local invocation \"query\"",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

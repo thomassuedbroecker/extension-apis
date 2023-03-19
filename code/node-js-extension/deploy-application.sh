@@ -20,7 +20,7 @@ export ASSISTANT_EXTENSION_URL=""
 
 export STATUS="Running"
 
-export COMMONTAG="v0.0.3"
+export COMMONTAG="v0.0.4"
 export EXTENSION_IMAGE="$REGISTRY/$REPOSITORY/nodejs-assistant-extension:$COMMONTAG"
 
 # **********************************************************************************

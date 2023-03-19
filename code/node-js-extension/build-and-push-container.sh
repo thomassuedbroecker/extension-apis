@@ -2,7 +2,7 @@
 
 # **************** Global variables
 export ROOT_PATH=$(pwd)
-export IMAGE_NAME=nodejs-assistant-extension:v0.0.3
+export IMAGE_NAME=nodejs-assistant-extension:v0.0.4
 export URL=quay.io
 export REPOSITORY=tsuedbroecker
 export CONTAINER_RUNTIME=podman
