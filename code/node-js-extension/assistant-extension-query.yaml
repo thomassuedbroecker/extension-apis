@@ -1,12 +1,12 @@
 openapi: 3.0.0
 info:
   version: v1
-  title: assistant-extension API for a Node.js application
-  description: Assistant-extension API for a Node.js application documentation to be integrated with Watson Assistant.
+  title: FAKE question and answering implementation
+  description: FAKE question and answering implementation of the REST API to be integrated with Watson Assistant.
 
 servers:
   - description: Code Engine application
-    url: https://assistant-extension.zgxycyvosgr.us-south.codeengine.appdomain.cloud/v1
+    url: https://YOUR_SERVER_URL/v1
 
 security:
   - basicAuth: []
