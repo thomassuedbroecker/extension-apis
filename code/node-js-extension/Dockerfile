@@ -22,6 +22,7 @@ FROM node:19-alpine
 
 RUN apk --no-cache add curl=7.83.1-r6
 RUN apk --no-cache add libcrypto1.1=1.1.1t-r0
+RUN apk --no-cache add libssl1.1=1.1.1t-r0
 RUN apk update
 
 # Set permissions
