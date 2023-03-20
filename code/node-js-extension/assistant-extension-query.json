@@ -1,0 +1,182 @@
+{
+    "openapi" : "3.0.0",
+    "info" : {
+      "version" : "1",
+      "title" : "assistant-extension API for a Node.js application",
+      "description" : "Assistant-extension API for a Node.js application documentation to be integrated with Watson Assistant."
+    },
+    "servers" : [ {
+      "description" : "Code Engine application",
+      "url" : "https://assistant-extension.zgxycyvosgr.us-south.codeengine.appdomain.cloud/v1"
+    } ],
+    "security" : [ {
+      "basicAuth" : [ ]
+    } ],
+    "paths" : {
+      "/getmessage" : {
+        "get" : {
+          "description" : "Returns a simple message",
+          "responses" : {
+            "200" : {
+              "description" : "200 message returned",
+              "content" : {
+                "application/json" : {
+                  "schema" : {
+                    "type" : "object",
+                    "properties" : {
+                      "message" : {
+                        "type" : "string"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "401" : {
+              "description" : "401 Access denied",
+              "content" : {
+                "application/json" : {
+                  "schema" : {
+                    "type" : "object",
+                    "properties" : {
+                      "message" : {
+                        "type" : "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/query" : {
+        "post" : {
+          "tags" : [ "Answer Resource" ],
+          "summary" : "Get an answer",
+          "description" : "Get an answer",
+          "requestBody" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Data"
+                }
+              }
+            }
+          },
+          "responses" : {
+            "401" : {
+              "description" : "Not authorized"
+            },
+            "200" : {
+              "description" : "Answer successfully returned",
+              "content" : {
+                "application/json" : {
+                  "schema" : {
+                    "$ref" : "#/components/schemas/Answer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components" : {
+      "schemas" : {
+        "Answer" : {
+          "type" : "object",
+          "properties" : {
+            "matching_results" : {
+              "format" : "int32",
+              "type" : "integer"
+            },
+            "retrievalDetails" : {
+              "$ref" : "#/components/schemas/RetrievalDetails"
+            },
+            "results" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/components/schemas/Result"
+              }
+            }
+          }
+        },
+        "Data" : {
+          "type" : "object",
+          "properties" : {
+            "query" : {
+              "type" : "string"
+            }
+          }
+        },
+        "DocumentPassage" : {
+          "type" : "object",
+          "properties" : {
+            "passage_text" : {
+              "type" : "string"
+            },
+            "passageAnswers" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/components/schemas/PassageAnswer"
+              }
+            }
+          }
+        },
+        "PassageAnswer" : {
+          "type" : "object",
+          "properties" : {
+            "answer_text" : {
+              "type" : "string"
+            },
+            "confidence" : {
+              "format" : "double",
+              "type" : "number"
+            }
+          }
+        },
+        "Result" : {
+          "type" : "object",
+          "properties" : {
+            "document_id" : {
+              "type" : "string"
+            },
+            "title" : {
+              "type" : "string"
+            },
+            "text" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "link" : {
+              "type" : "string"
+            },
+            "document_passages" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/components/schemas/DocumentPassage"
+              }
+            }
+          }
+        },
+        "RetrievalDetails" : {
+          "type" : "object",
+          "properties" : {
+            "document_retrieval_strategy" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "securitySchemes" : {
+        "basicAuth" : {
+          "type" : "http",
+          "scheme" : "basic"
+        }
+      }
+    }
+  }
+  

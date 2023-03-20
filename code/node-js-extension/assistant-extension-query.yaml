@@ -6,7 +6,7 @@ info:
 
 servers:
   - description: Code Engine application
-    url: https://assistant-extension.v1j51p93c1o.eu-de.codeengine.appdomain.cloud/v1
+    url: https://assistant-extension.zgxycyvosgr.us-south.codeengine.appdomain.cloud/v1
 
 security:
   - basicAuth: []
@@ -41,10 +41,6 @@ paths:
       - Answer Resource
       summary: Get an answer
       description: Get an answer
-          tags:
-      - Answer Resource
-      summary: Get an answer
-      description: Get an answer
       requestBody:
         content:
           application/json:
@@ -59,8 +55,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Answer'
-      security:
-      - apikey: []
       
 components:
   schemas:
