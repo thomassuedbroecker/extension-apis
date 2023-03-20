@@ -19,7 +19,8 @@ COPY server.js ./
 ##############################
 FROM node:19-alpine
 
-RUN apk --no-cache add curl
+RUN apk --no-cache add curl=7.83.1-r6
+
 # Set permissions
 WORKDIR /usr/src/app
 COPY --from=BUILD /usr/src/app .
