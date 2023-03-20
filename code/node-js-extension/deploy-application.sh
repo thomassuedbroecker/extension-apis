@@ -4,11 +4,13 @@
 # ================
 # command documentation: https://cloud.ibm.com/docs/codeengine?topic=codeengine-cli#cli-application-create
 
+source ./.env
+
 # **************** Global variables
 
 echo "Name for the project: $MYPROJECT"
 
-export ROOT_FOLDER=$ROOTFOLDER
+export ROOT_FOLDER=$(pwd)
 export PROJECT_NAME=$MYPROJECT
 export RESOURCE_GROUP=${RESOURCE_GROUP:-default}
 export REGION=${REGION:-us-south}
