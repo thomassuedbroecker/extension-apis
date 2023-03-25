@@ -4,7 +4,7 @@
   "valid": true,
   "status": "Available",
   "created": "2023-03-16T16:00:46.362Z",
-  "updated": "2023-03-16T17:02:59.794Z",
+  "updated": "2023-03-25T07:24:39.284Z",
   "language": "en",
   "skill_id": "dce84fc2-0a9c-4f72-97cd-520ead0781c9",
   "workspace": {
@@ -730,32 +730,13 @@
           {
             "step": "step_995",
             "output": {
-              "generic": [
-                {
-                  "values": [
-                    {
-                      "text_expression": {
-                        "concat": [
-                          {
-                            "scalar": "Search for : "
-                          },
-                          {
-                            "skill_variable": "1_req_query_text"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "response_type": "text",
-                  "selection_policy": "sequential"
-                }
-              ]
+              "generic": []
             },
             "handlers": [],
             "resolver": {
               "type": "callout",
               "callout": {
-                "path": "/query-mock-confident",
+                "path": "/query",
                 "type": "integration_interaction",
                 "method": "POST",
                 "internal": {
@@ -766,7 +747,7 @@
                   "body": [
                     {
                       "value": {
-                        "skill_variable": "1_req_query_text"
+                        "expression": "\"text:\".concat(${1_req_query_text})"
                       },
                       "parameter": "query"
                     }
@@ -915,6 +896,10 @@
             "data_type": "any"
           },
           {
+            "variable": "step_410_result_2",
+            "data_type": "any"
+          },
+          {
             "variable": "step_429_result_1",
             "data_type": "any"
           },
@@ -962,7 +947,7 @@
             "data_type": "any"
           },
           {
-            "title": "Search for : {variable}",
+            "title": "",
             "variable": "step_995",
             "data_type": "any"
           },
@@ -1529,22 +1514,13 @@
         "intent": "action_7584_intent_2254",
         "examples": [
           {
-            "text": "1-Search"
-          },
-          {
-            "text": "any info about Internal Business Machines"
-          },
-          {
             "text": "IBM"
           },
           {
-            "text": "news about IBM"
+            "text": "Where can"
           },
           {
-            "text": "what is about IBM"
-          },
-          {
-            "text": "When and for how much did IBM acquire Red Hat?"
+            "text": "Where can I find detailed purchasing spend information?"
           }
         ]
       },
