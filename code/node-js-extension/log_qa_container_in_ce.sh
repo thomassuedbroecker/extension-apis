@@ -6,7 +6,9 @@ source ./.env
 export RESOURCE_GROUP=${RESOURCE_GROUP:-default}
 export REGION=${REGION:-us-south}
 export CE_APP_NAME="assistant-extension"
-export CE_PROJECT_NAMESPACE=$MYPROJECT
+export CE_PROJECT_NAMESPACE=""
+export CE_PROJECT_NAME=$MYPROJECT
+export CE_CONFIGURATION=0001
 
 # **********************************************************************************
 # Functions definition
@@ -53,7 +55,7 @@ function kube_pod_log(){
     echo " Kubernetes $CE_APP_NAME: log"
     echo "************************************"
 
-    FIND=$CE_APP_NAME
+    FIND="$CE_APP_NAME-$CE_CONFIGURATION"
     APP_POD=$(kubectl get pod -n $CE_PROJECT_NAMESPACE | grep $FIND | awk '{print $1}')
     echo "************************************"
     echo "Show log for the pod: $APP_POD"
