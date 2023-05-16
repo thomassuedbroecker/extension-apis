@@ -1,7 +1,7 @@
 ##############################
 #           BUILD
 ##############################
-FROM node:19-alpine as BUILD
+FROM node:20-alpine as BUILD
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -17,13 +17,12 @@ COPY server.js ./
 ##############################
 #           PRODUCTION
 ##############################
-FROM node:19-alpine
+FROM node:20-alpine
 
-
-RUN apk --no-cache add curl=7.83.1-r6
-RUN apk --no-cache add libcrypto1.1=1.1.1t-r1
-RUN apk --no-cache add libssl1.1=1.1.1t-r1
-RUN apk update
+# RUN apk update
+# RUN apk --no-cache add curl=7.83.1-r6
+# RUN apk --no-cache add libcrypto1.1=1.1.1t-r1
+# RUN apk --no-cache add libssl1.1=1.1.1t-r1
 
 # Set permissions
 WORKDIR /usr/src/app
